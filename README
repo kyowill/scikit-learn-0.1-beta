@@ -1,0 +1,91 @@
+.. -*- mode: rst -*-
+
+About
+=====
+
+scikit.learn is a python module for machine learning built on top of
+scipy.
+
+The project was started in 2007 by David Cournapeu as a Google Summer
+of Code project, and since then many volunteers have contributed. See
+the AUTHORS file for a complete list of contributors.
+
+It is currently maintained by a team of volonteers.
+
+
+Download
+========
+
+There are currently no public releases, please see section 'Code'
+below.
+
+
+Dependencies
+===========
+
+The required dependencies to build the software are python >= 2.5,
+NumPy >= 1.1, SciPy, the Boost libraries and a working C++ compiler.
+
+Optional dependencies are scikits.optimization for module
+machine.manifold_learning.
+
+To run the tests you will also need nosetests and python-dap
+(http://pypi.python.org/pypi/dap/).
+
+
+Install
+=======
+
+This packages uses distutils, which is the default way of installing
+python modules. The install command is::
+
+  python setup.py install
+
+If you have installed the boost libraries in a non-standard location
+you might need to pass the appropriate --include argument so that it
+find the correct headers. For example, if your headers reside in
+/opt/local/include, (which is the case if you have installed them
+through Mac Ports), you must issue the commands::
+
+  python setup.py build_ext --include=/opt/local/include
+  python setup.py install
+
+
+Mailing list
+============
+
+There's a general and development mailing list, visit
+https://lists.sourceforge.net/lists/listinfo/scikit-learn-general to
+subscribe to the mailing list.
+
+
+Development
+===========
+
+Code
+----
+
+To check out the sources for subversion run the command::
+
+   svn co http://scikit-learn.svn.sourceforge.net/svnroot/scikit-learn/trunk scikit-learn
+
+You can also browse the code online in the address
+http://scikit-learn.svn.sourceforge.net/viewvc/scikit-learn
+
+
+Bugs
+----
+
+Please submit bugs you might encounter, as well as patches and feature
+requests to the tracker located at the address
+https://sourceforge.net/apps/trac/scikit-learn/report
+
+
+Testing
+-------
+
+To execute the test suite, run from the project's top directory::
+
+    nosetests --with-doctest scikits/
+
+
